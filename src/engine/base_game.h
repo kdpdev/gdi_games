@@ -1,4 +1,4 @@
-﻿#pragma once;
+﻿#pragma once
 
 #include <engine/abstract_game.h>
 #include <engine/game_object.h>

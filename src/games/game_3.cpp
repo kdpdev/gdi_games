@@ -26,12 +26,12 @@ Game3::Game3(const MemDC& dc, const Rect& bounds, const Color& bkgnColor)
   const Point pt3 = Point(10, 50);
   auto triangle = std::make_unique<TriangleObject>(pt1, pt2, pt3, RGB(255, 255, 0));
 
-  auto circle = std::make_unique<CircleObject>(15, RGB(200, 0, 0));
+  auto circle = std::make_unique<CircleObject>(Length(15), RGB(200, 0, 0));
   circle->SetEventHandler(Engine::GameObject::EVENT_MOUSE_CLICK, CreateEventEmiter(EVENT_NEXT_GAME));
 
   const double rotatesPerSecond = 0.3;
   const Rect& triangleBounds = triangle->GetBounds();
-  const Length triangleMovementR = (std::min)(bounds.GetWidth() - triangleBounds.GetWidth(), bounds.GetHeight() - triangleBounds.GetHeight()) / 2;
+  const Length triangleMovementR = (std::min<Length>)(bounds.GetWidth() - triangleBounds.GetWidth(), bounds.GetHeight() - triangleBounds.GetHeight()) / 2;
   const Point triangleMovementCenter(bounds.GetCenter().x - triangleBounds.GetWidth() / 2, bounds.GetCenter().y - triangleBounds.GetHeight() / 2);
   auto triangleMovement = CreateCircularMovement(*triangle, rotatesPerSecond, Circle(triangleMovementCenter, triangleMovementR));
 

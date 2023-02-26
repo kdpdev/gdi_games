@@ -1,4 +1,4 @@
-﻿#pragma once;
+﻿#pragma once
 
 #include <engine/core/noncopyable.h>
 #include <engine/core/primitives.h>
@@ -9,7 +9,7 @@ namespace Engine
 {
   namespace Core
   {
-    class MemDC
+    class MemDC : private Noncopyable
     {
     public:
       explicit MemDC(HWND hWnd = NULL);

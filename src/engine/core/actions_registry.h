@@ -1,4 +1,4 @@
-﻿#pragma once;
+﻿#pragma once
 
 #include <engine/core/action.h>
 #include <engine/core/err.h>
@@ -31,7 +31,7 @@ namespace Engine
       Action Get(const Key& key) const
       {
         ERR_THROW_IF_NOT(HasAction(key), "Action is not found.");
-        return *Find(key)
+        return *Find(key);
       }
 
       void Add(const Key& key, Action action)

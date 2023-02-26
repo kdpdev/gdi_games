@@ -1,4 +1,4 @@
-﻿#pragma once;
+﻿#pragma once
 
 #include <cstdint>
 #include <algorithm>
@@ -10,8 +10,8 @@ namespace Engine
   namespace Core
   {
     using Color = COLORREF;
-    using Coord = std::int16_t;
-    using Length = std::uint32_t;
+    using Coord = std::int32_t;
+    using Length = std::uint16_t;
 
     struct Point
     {

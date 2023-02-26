@@ -1,4 +1,4 @@
-﻿#pragma once;
+﻿#pragma once
 
 #include <engine/core/action.h>
 #include <engine/core/noncopyable.h>
